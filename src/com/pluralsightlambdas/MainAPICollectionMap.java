@@ -1,5 +1,6 @@
 package com.pluralsightlambdas;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 public class MainAPICollectionMap {
@@ -68,5 +69,14 @@ public class MainAPICollectionMap {
         // Print the result in map1
         System.out.println("Map 1");
         map1.forEach((city, peeps) -> System.out.println(city + " : " + peeps));
+
+        // Dius
+        Map<Promotion, Product> pricingStrategy = new HashMap<>();
+
+
+        Product appleTV = new Product("atv", "Apple TV", new BigDecimal(109.50));
+        Product ipad = new Product("ipd", "Super iPad", new BigDecimal(549.99));
+//        pricingStrategy.p
+
     }
 }
