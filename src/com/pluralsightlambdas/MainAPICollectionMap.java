@@ -71,12 +71,14 @@ public class MainAPICollectionMap {
         map1.forEach((city, peeps) -> System.out.println(city + " : " + peeps));
 
         // Dius
-        Map<Promotion, Product> pricingStrategy = new HashMap<>();
+        Map<Promotion, List<Product>> pricingStrategy = new HashMap<>();
 
 
         Product appleTV = new Product("atv", "Apple TV", new BigDecimal(109.50));
-        Product ipad = new Product("ipd", "Super iPad", new BigDecimal(549.99));
-//        pricingStrategy.p
+        Product iPad = new Product("ipd", "Super iPad", new BigDecimal(549.99));
+        pricingStrategy.computeIfAbsent(Promotion.THREE_FOR_TWO, promotion -> new ArrayList<>()).add(appleTV);
+        pricingStrategy.computeIfAbsent(Promotion.BULK_DISCOUNT, promotion -> new ArrayList<>()).add(iPad);
+        pricingStrategy.computeIfAbsent(Promotion.THREE_FOR_TWO, promotion -> new ArrayList<>()).add(appleTV);
 
     }
 }
