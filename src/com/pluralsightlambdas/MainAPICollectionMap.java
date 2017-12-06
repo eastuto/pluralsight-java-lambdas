@@ -73,12 +73,12 @@ public class MainAPICollectionMap {
         // Dius
         Map<Promotion, List<Product>> pricingStrategy = new HashMap<>();
 
-
         Product appleTV = new Product("atv", "Apple TV", new BigDecimal(109.50));
         Product iPad = new Product("ipd", "Super iPad", new BigDecimal(549.99));
+        Product macbookPro = new Product("mbp", "Macbook Pro", new BigDecimal(1399.99));
         pricingStrategy.computeIfAbsent(Promotion.THREE_FOR_TWO, promotion -> new ArrayList<>()).add(appleTV);
         pricingStrategy.computeIfAbsent(Promotion.BULK_DISCOUNT, promotion -> new ArrayList<>()).add(iPad);
-        pricingStrategy.computeIfAbsent(Promotion.THREE_FOR_TWO, promotion -> new ArrayList<>()).add(appleTV);
+        pricingStrategy.computeIfAbsent(Promotion.FREE_VGA_ADAPTER, promotion -> new ArrayList<>()).add(macbookPro);
 
     }
 }
