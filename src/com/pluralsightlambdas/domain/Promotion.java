@@ -1,4 +1,4 @@
-package com.pluralsightlambdas;
+package com.pluralsightlambdas.domain;
 
 public enum Promotion {
     THREE_FOR_TWO,

@@ -1,4 +1,4 @@
-package com.pluralsightlambdas;
+package com.pluralsightlambdas.domain;
 
 import java.math.BigDecimal;
 

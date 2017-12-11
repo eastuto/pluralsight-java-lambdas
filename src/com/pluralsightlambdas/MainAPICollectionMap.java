@@ -1,5 +1,9 @@
 package com.pluralsightlambdas;
 
+import com.pluralsightlambdas.data.SampleData;
+import com.pluralsightlambdas.domain.Product;
+import com.pluralsightlambdas.domain.Promotion;
+
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -71,7 +75,7 @@ public class MainAPICollectionMap {
         map1.forEach((city, peeps) -> System.out.println(city + " : " + peeps));
 
         // Dius
-        Map<Promotion, List<Product>> pricingStrategy = new HashMap<>();
+        Map<Promotion, List<Product>> pricingStrategy = SampleData.getPricingRules();
 
         Product appleTV = new Product("atv", "Apple TV", new BigDecimal(109.50));
         Product iPad = new Product("ipd", "Super iPad", new BigDecimal(549.99));
